@@ -6,7 +6,7 @@ This project aims to prepare a RPi 3 as a DHCP server for an intranet.
 ```
 sudo raspi-config
 ```
-From the menu, select 5 Interfacing Options --> P2 SSH.
+From the menu, select <b>5 Interfacing Options</b> --> <b>P2 SSH</b>.
 
 
 ## Install TightVNC & XRDP servers
