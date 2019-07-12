@@ -81,8 +81,8 @@ sudo gedit /etc/systemd/system/isc-dhcp-server.service
 At the [Service] section, modify the add the following
 
 ```
-set Restart=on-failure,
-add RestartSec=5
+Restart=on-failure,
+RestartSec=5
 ```
 
 At the end of the document, add the following
