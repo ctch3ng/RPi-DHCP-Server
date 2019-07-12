@@ -69,3 +69,34 @@ Load the new settings and reboot.
 sudo dhcpd -cf /etc/dhcp/dhcpd.conf
 sudo reboot
 ```
+
+### Remarks
+The DHCP server may not load properly when eth0 is not yet ready while booting. To solve that, one can enable <b>Restart to Failure</b> and add a delay of 5-10 seconds. To do that, edit isc-dhcp-server.service as follows
+
+```
+sudo cp /run/systemd/generator.late/isc-dhcp-server.service /etc/systemd/system
+sudo gedit /etc/systemd/system/isc-dhcp-server.service
+```
+
+At the [Service] section, modify the add the following
+
+```
+set Restart=on-failure,
+add RestartSec=5
+```
+
+At the end of the document, add the following
+
+```
+[Install]
+WantedBy=multi-user.target
+```
+
+Apply the new settings.
+
+```
+sudo systemctl daemon-reload
+sudo systemctl disable isc-dhcp-server
+sudo systemctl enable isc-dhcp-server
+```
+
