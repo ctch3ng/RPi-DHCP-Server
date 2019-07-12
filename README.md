@@ -61,3 +61,11 @@ range 192.168.1.16 192.168.1.239;
 option routers 192.168.1.1;
 }
 ```
+The DHCP server will allocate IP addresses ranging from 192.168.1.16 to 192.168.1.239 to all clients connected to its eth0 which are running as DHCP clients.
+
+Load the new settings and reboot.
+
+```
+sudo dhcpd -cf /etc/dhcp/dhcpd.conf
+sudo reboot
+```
