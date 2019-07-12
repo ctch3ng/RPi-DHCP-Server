@@ -70,8 +70,8 @@ sudo dhcpd -cf /etc/dhcp/dhcpd.conf
 sudo reboot
 ```
 
-### Remarks
-The DHCP server may not load properly when eth0 is not yet ready while booting. To solve that, one can enable <b>Restart to Failure</b> and add a delay of 5-10 seconds. To do that, edit isc-dhcp-server.service as follows
+### Remarks [^fn1]
+The DHCP server may not load properly when eth0 is not yet ready while booting. To solve that, one can enable <b>Restart on Failure</b> and add a delay of 5-10 seconds. To do that, edit isc-dhcp-server.service as follows
 
 ```
 sudo cp /run/systemd/generator.late/isc-dhcp-server.service /etc/systemd/system
@@ -100,3 +100,4 @@ sudo systemctl disable isc-dhcp-server
 sudo systemctl enable isc-dhcp-server
 ```
 
+[^fn1] https://raspberrypi.stackexchange.com/questions/70517/isc-dhcp-server-needs-to-be-restarted-after-reboot?rq=1
