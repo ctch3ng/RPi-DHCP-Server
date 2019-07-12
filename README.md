@@ -21,7 +21,7 @@ sudo apt-get install xrdp
 ```
  ## Install gedit<sup>3</sup> (Optional)
  
-Note<sup>3</sup>:  gedit is a general-purpose text editor with a clean and simple GUI
+Note<sup>3</sup>:  gedit is a general-purpose text editor with a clean and simple GUI.
  
  ```
  sudo apt-get install gedit
@@ -29,9 +29,9 @@ Note<sup>3</sup>:  gedit is a general-purpose text editor with a clean and simpl
 ### Assign static IP 192.168.1.1 to the RPi
 
 ```
-sudo gedit /etc/dhcpcd.conf
+sudo gedit /etc/dhcpcd.conf //you can use nano instead of gedit
 ```
-Add the following lines to the end of the document
+Add the following lines to the end of the document, save, and then exit.
 
 ```
 interface eth0
