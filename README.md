@@ -1,7 +1,7 @@
 # RPi-DHCP-Server
 This project aims to prepare a RPi 3 as a DHCP server for an intranet.
 
-## Enable SSH (Optional)
+### Enable SSH (Optional)
 
 ```
 sudo raspi-config
@@ -9,7 +9,7 @@ sudo raspi-config
 From the menu, select <b>5 Interfacing Options</b> --> <b>P2 SSH</b>.
 
 
-## Install TightVNC<sup>1</sup> & XRDP<sup>2</sup> servers (Optional)
+### Install TightVNC<sup>1</sup> & XRDP<sup>2</sup> servers (Optional)
 
 Note<sup>1</sup>: TightVNC is a cross-platform free and open-source remote desktop software application.
 
@@ -19,7 +19,7 @@ Note<sup>2</sup>: XRDP is an open-source implementation of Microsoft RDP (Remote
 sudo apt-get install tightvncserver -y
 sudo apt-get install xrdp -y
 ```
- ## Install gedit<sup>3</sup> (Optional)
+### Install gedit<sup>3</sup> (Optional)
  
 Note<sup>3</sup>:  gedit is a general-purpose text editor with a clean and simple GUI.
  
@@ -27,7 +27,7 @@ Note<sup>3</sup>:  gedit is a general-purpose text editor with a clean and simpl
  sudo apt-get install gedit -y
 ```
 
-## Install ISC DHCP server<sup>4</sup>
+### Install ISC DHCP server<sup>4</sup>
 
 ```
 sudo apt-get install isc-dhcp-server -y
