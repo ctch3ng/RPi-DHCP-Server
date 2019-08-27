@@ -58,10 +58,22 @@ Add the following lines to the end of the document, save, and then exit.
 ```
 subnet 192.168.1.0 mask 255.255.255.0 {
 range 192.168.1.16 192.168.1.239;
+option subnet-mask 255.255.255.0;
+option broadcast-address 192.168.1.255;
 option routers 192.168.1.1;
 }
 ```
 The DHCP server will allocate IP addresses ranging from 192.168.1.16 to 192.168.1.239 to all clients connected to its eth0 which are running as DHCP clients.
+
+Edit isc-dhcp-server with gedit (you can replace gedit with nano).
+```
+sudo gedit /etc/default/isc-dhcp-server
+```
+Add eth0 to INTERFACESv4, such that
+```
+INTERFACESv4="eth0"
+INTERFACESv6=""
+```
 
 Load the new settings and reboot.
 
