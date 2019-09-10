@@ -56,7 +56,7 @@ sudo gedit /etc/dhcp/dhcpd.conf
 Add the following lines to the end of the document, save, and then exit.
 
 ```
-subnet 192.168.1.0 mask 255.255.255.0 {
+subnet 192.168.1.0 netmask 255.255.255.0 {
 range 192.168.1.16 192.168.1.239;
 option subnet-mask 255.255.255.0;
 option broadcast-address 192.168.1.255;
